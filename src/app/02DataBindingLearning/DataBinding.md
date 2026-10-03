@@ -52,6 +52,6 @@ b. Two way Data Binding (Bi-direction Binding)
         
         => An Angular pipe transforms data into a display-friendly format, and you commonly use it inside interpolation with {{ value | pipeName }}.
 
-        => Chaining pipe is also there, which is multiple pipe in one data. {{data | pipe1 | pipe2}}
+        => Chaining pipe is also there, which is multiple pipe in one data. {{data | pipe1 | pipe2 | pipe3}}
 
 <!-- 📙 Interpolation End -->
