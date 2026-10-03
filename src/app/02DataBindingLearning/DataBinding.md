@@ -23,5 +23,35 @@ b. Two way Data Binding (Bi-direction Binding)
     => In vanila js we have use "document.getElementById(Id).innerHTML="..."" and in angular instead of this we use "interpolation"
     e.g name="Chitaranjan"
         <p>{{name}}</p>
+    => It converts the outcome into string and places it into the DOM.
+    => Interpolation is specifically used when I want to display a component value as text/content in the template
+
+    => Uses of Interpolation:
+    1. Display Component Properties in UI using double curly braces({{}}).
+    2. You can pass object, array and function
+    3. You can evaluate mathematical expressions in suing curly braces like ({{7+8}})
+
+    ✔ What is a Pipe in Angular?
+        A pipe is a feature in Angular that lets you transform or format data directly in the template without changing the original data.
+        e.g: 
+            name = "Chitaranjan"
+            {{name | uppercase}}
+            The | symbol means "apply this pipe to the value."
+            here,
+                name -> data
+                | -> pipe operator
+                uppercase -> pipe
+
+        Commont built-in pipes are: 
+            -> uppercase
+            -> lowercase
+            -> titlecase: hello world-> Hello World
+            -> currency: for dollar: 25000->$25000
+            -> currency:'INR' : 25000->₹25,000.00
+            -> date: format the date as dd/mm/yyyy
+        
+        => An Angular pipe transforms data into a display-friendly format, and you commonly use it inside interpolation with {{ value | pipeName }}.
+
+        => Chaining pipe is also there, which is multiple pipe in one data. {{data | pipe1 | pipe2}}
 
 <!-- 📙 Interpolation End -->

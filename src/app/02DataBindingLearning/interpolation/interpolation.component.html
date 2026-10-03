@@ -1,0 +1,19 @@
+<h1>Hii, {{name}}</h1> <!-- simple data interpolation -->
+
+<h1>Name: {{person.name}}</h1> <!-- Object data interpolation -->
+<h1>Designation: {{person.designation}}</h1>
+<h1>Salary: {{person.salary}}</h1>
+
+<p>Array 0 index: {{arr[0]}}</p> <!-- Array data interpolation -->
+<p>Array 1 index: {{arr[1]}}</p>
+<p>Array 2 index: {{arr[2]}}</p>
+<p>Array 3 index: {{arr[3]}}</p>
+
+<h1>Function: {{ functionname() }} interpolation</h1>
+
+<h1>Value: {{8+8}} </h1>
+
+<!-- Pipe -->
+<h1>Name: {{myName | uppercase }} </h1>
+<h1>Salary: {{mySalary | currency:'INR'}} </h1>
+<h1>Date Of Join: {{DateOfJoin | date}} </h1>
