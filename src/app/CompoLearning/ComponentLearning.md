@@ -1,0 +1,3 @@
+-> component is the basic building block of the angular application or in a web application.
+-> it is used to build the UI.
+-> 
