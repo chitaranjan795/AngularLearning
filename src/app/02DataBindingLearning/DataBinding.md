@@ -32,26 +32,39 @@ b. Two way Data Binding (Bi-direction Binding)
     3. You can evaluate mathematical expressions in suing curly braces like ({{7+8}})
 
     ✔ What is a Pipe in Angular?
-        A pipe is a feature in Angular that lets you transform or format data directly in the template without changing the original data.
-        e.g: 
+        A pipe is a feature in Angular that let you transform or format data directly in the template without changing the original data.
+        e.g:
             name = "Chitaranjan"
             {{name | uppercase}}
-            The | symbol means "apply this pipe to the value."
             here,
                 name -> data
                 | -> pipe operator
                 uppercase -> pipe
 
-        Commont built-in pipes are: 
+        Common built-in pipes are:
             -> uppercase
             -> lowercase
             -> titlecase: hello world-> Hello World
             -> currency: for dollar: 25000->$25000
             -> currency:'INR' : 25000->₹25,000.00
             -> date: format the date as dd/mm/yyyy
-        
+
         => An Angular pipe transforms data into a display-friendly format, and you commonly use it inside interpolation with {{ value | pipeName }}.
 
         => Chaining pipe is also there, which is multiple pipe in one data. {{data | pipe1 | pipe2 | pipe3}}
 
 <!-- 📙 Interpolation End -->
+
+<!-- 📙 Porperty Binding start -->
+
+Property binding is a one-way data-binding mechanism that passes values directly from your application's logic (TypeScript/JavaScript class or state) into the target property of a DOM element, directive, or child component.
+
+Its primary purpose is to keep the user interface dynamically synchronized with internal data states without requiring manual DOM manipulation (like document.getElementById().disabled = true).
+
+<!-- 📙 Porperty Binding End-->
+
+<!-- 📙 Event Binding start -->
+
+It means when you will click a button then the respective function will called
+
+<!-- 📙 Event Binding End -->

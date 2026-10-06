@@ -11,11 +11,15 @@ import { FooterComponent } from './01CompoLearning/footer/footer.component';
  */
 // ++++++++++++++++++++ 📙 CompoLearning Components End ++++++++++++++++++++
 
-
 // ++++++++++++++++++++ 📙 DataBindingLearning Components Start ++++++++++++++++++++
-import { InterpolationComponent } from './02DataBindingLearning/interpolation/interpolation.component';
-// ++++++++++++++++++++ 📙 DataBindingLearning Components End ++++++++++++++++++++
 
+// One Way Data Binding
+// import { InterpolationComponent } from './02DataBindingLearning/interpolation/interpolation.component';
+// import { PropertyBindingComponent } from './02DataBindingLearning/property-binding/property-binding.component';
+// import { EventBindingComponent } from './02DataBindingLearning/event-binding/event-binding.component';
+import { EventBindingFormComponent } from './02DataBindingLearning/event-binding-form/event-binding-form.component';
+
+// ++++++++++++++++++++ 📙 DataBindingLearning Components End ++++++++++++++++++++
 
 @Component({
   selector: 'app-rooted',
@@ -32,9 +36,12 @@ import { InterpolationComponent } from './02DataBindingLearning/interpolation/in
   */
 
   imports: [
-    InterpolationComponent
-  ],  
-  
+    // InterpolationComponent,
+    // PropertyBindingComponent,
+    // EventBindingComponent,
+    EventBindingFormComponent,
+  ],
+
   templateUrl: `./app.html`,
 })
 export class App {}

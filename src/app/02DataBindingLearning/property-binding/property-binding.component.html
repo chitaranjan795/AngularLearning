@@ -1,0 +1,32 @@
+<p [style.c olor]="textColor">property-binding works!</p>
+
+<input type="text" [value]="name">
+
+<br>
+<br>
+
+<img [src]="desktopImg" alt="" width="200" height="200">
+
+<br>
+<br>
+
+<!-- 1. Binding dynamic placeholder and initial value -->
+<div>
+    <label>Username:</label>
+    <input type="text" [value]="initialUsername" [placeholder]="emailPlaceholder">
+</div>
+
+<!-- 2. Binding boolean properties directly -->
+<div>
+    <label>
+        <input type="checkbox" [checked]="allowEmailNotifications">
+        Enable Notifications
+    </label>
+</div>
+
+<!-- 3. Controlling button availability via state -->
+<div>
+    <button [disabled]="isFormSubmitting">
+        {{ isFormSubmitting ? 'Saving...' : 'Save Changes' }}
+    </button>
+</div>

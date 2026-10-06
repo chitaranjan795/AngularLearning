@@ -1,3 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+
+body {
+    transition: background-color 0.3s ease;
+}
+
+body.white-theme {
+    background-color: white;
+    color: black;
+}
+
+body.yellow-theme {
+    background-color: yellow;
+    color: black;
+}
