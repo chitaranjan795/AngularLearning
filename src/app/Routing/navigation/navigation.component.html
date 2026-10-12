@@ -1,0 +1,11 @@
+<nav class="flex justify-between p-[15px]">
+    <h1 class="text-xl font-bold cursor-pointer" routerLink="/">Logo</h1>
+    <ul class="flex gap-[10px]">
+        <a routerLinkActive="text-blue-600 " [routerLinkActiveOptions]="{ exact: true }" routerLink="/"
+            class="font-bold hover:text-blue-600 transition-all duration-300">Home</a>
+        <a class="font-bold hover:text-blue-600 transition-all duration-300" routerLinkActive="text-blue-600 "
+            routerLink="/about">About</a>
+        <a class="font-bold hover:text-blue-600 hover: transition-all duration-300" routerLinkActive="text-blue-600 "
+            routerLink="/services">Services</a>
+    </ul>
+</nav>

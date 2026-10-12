@@ -17,9 +17,20 @@ import { FooterComponent } from './01CompoLearning/footer/footer.component';
 // import { InterpolationComponent } from './02DataBindingLearning/interpolation/interpolation.component';
 // import { PropertyBindingComponent } from './02DataBindingLearning/property-binding/property-binding.component';
 // import { EventBindingComponent } from './02DataBindingLearning/event-binding/event-binding.component';
-import { EventBindingFormComponent } from './02DataBindingLearning/event-binding-form/event-binding-form.component';
+// import { EventBindingFormComponent } from './02DataBindingLearning/event-binding-form/event-binding-form.component';
 
 // ++++++++++++++++++++ 📙 DataBindingLearning Components End ++++++++++++++++++++
+
+// ++++++++++++++++++++ 📙 ParentChild Components Start ++++++++++++++++++++
+import { ParentComponent } from './03ParentchildCommunication/parent/parent.component';
+// ++++++++++++++++++++ 📙 ParentChild Components End ++++++++++++++++++++
+
+// ++++++++++++++++++++ 📙 Router Components Start ++++++++++++++++++++
+
+import { NavigationComponent } from './Routing/navigation/navigation.component';
+import { RouterOutlet } from '@angular/router';
+
+// ++++++++++++++++++++ 📙 Router Components Start ++++++++++++++++++++
 
 @Component({
   selector: 'app-rooted',
@@ -34,14 +45,20 @@ import { EventBindingFormComponent } from './02DataBindingLearning/event-binding
     FooterComponent,
   ],
   */
-
+  /* 
   imports: [
     // InterpolationComponent,
     // PropertyBindingComponent,
     // EventBindingComponent,
-    EventBindingFormComponent,
+    // EventBindingFormComponent,
   ],
+ */
+
+  // imports: [ParentComponent],
+
+  imports: [RouterOutlet, NavigationComponent],
 
   templateUrl: `./app.html`,
+  styleUrl: `./app.css`,
 })
 export class App {}

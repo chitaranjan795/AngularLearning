@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   imports: [],
   templateUrl: './property-binding.component.html',
 })
+
 export class PropertyBindingComponent {
   name = 'Chitaranjan';
   desktopImg = 'Desktop.jpg';
