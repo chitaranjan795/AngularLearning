@@ -15,27 +15,28 @@ import { FooterComponent } from './01CompoLearning/footer/footer.component';
 
 // One Way Data Binding
 // import { InterpolationComponent } from './02DataBindingLearning/interpolation/interpolation.component';
-
+// import { PropertyBindingComponent } from './02DataBindingLearning/property-binding/property-binding.component';
+import { EventBindingComponent } from './02DataBindingLearning/event-binding/event-binding.component';
 // ++++++++++++++++++++ 📙 DataBindingLearning Components End ++++++++++++++++++++
 
 @Component({
   selector: 'app-rooted',
   standalone: true,
   //  ✅ CompoLearning component's Imports
-  imports: [
+  /*  imports: [
     NavigationComponent,
     HeaderComponent,
     ServicesComponent,
     AboutComponent,
     ReviewsComponent,
     FooterComponent,
-  ],
+  ], */
 
-  /*
   imports: [
     // InterpolationComponent,
+    // PropertyBindingComponent,
+    EventBindingComponent
   ],
- */
 
   templateUrl: `./app.html`,
   styleUrl: `./app.css`,

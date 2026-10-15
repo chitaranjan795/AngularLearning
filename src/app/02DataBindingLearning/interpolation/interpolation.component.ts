@@ -11,7 +11,6 @@ interface person {
 
 @Component({
   selector: 'app-interpolation',
-  // imports: [TitleCasePipe, CurrencyPipe, DatePipe],
   imports: [CommonModule],
   templateUrl: './interpolation.component.html',
   styleUrl: './interpolation.component.css',
