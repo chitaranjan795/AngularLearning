@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { ServicesCardComponent } from "./../services-card/services-card.component";
+import { ServicesCardComponent } from './../services-card/services-card.component';
 
 @Component({
   selector: 'app-services',
@@ -8,4 +8,6 @@ import { ServicesCardComponent } from "./../services-card/services-card.componen
   templateUrl: './services.component.html',
   styleUrl: './services.component.css',
 })
-export class ServicesComponent {}
+export class ServicesComponent {
+  services = [1, 2, 3, 4, 5];
+}
