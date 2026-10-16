@@ -17,6 +17,8 @@ import { FooterComponent } from './01CompoLearning/footer/footer.component';
 // import { InterpolationComponent } from './02DataBindingLearning/interpolation/interpolation.component';
 // import { PropertyBindingComponent } from './02DataBindingLearning/property-binding/property-binding.component';
 import { EventBindingComponent } from './02DataBindingLearning/event-binding/event-binding.component';
+import { TipCalculatorComponent } from './02DataBindingLearning/Project/tip-calculator/tip-calculator.component';
+
 // ++++++++++++++++++++ 📙 DataBindingLearning Components End ++++++++++++++++++++
 
 @Component({
@@ -35,7 +37,8 @@ import { EventBindingComponent } from './02DataBindingLearning/event-binding/eve
   imports: [
     // InterpolationComponent,
     // PropertyBindingComponent,
-    EventBindingComponent
+    // EventBindingComponent,
+    TipCalculatorComponent,
   ],
 
   templateUrl: `./app.html`,

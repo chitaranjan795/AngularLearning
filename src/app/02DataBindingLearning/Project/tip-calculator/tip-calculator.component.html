@@ -1,0 +1,40 @@
+<div class="p-4">
+    <label for="bill">Bill:</label>
+    <input id="bill" type="number" min="0" [value]="bill" (input)="input_bill_func($event)" placeholder="Enter bill"
+        class="border p-1" />
+
+    <br /><br />
+
+    <label for="people">No. of People:</label>
+    <input id="people" type="number" min="1" step="1" [value]="people" (input)="input_Person_func($event)"
+        placeholder="Enter people" class="border p-1" />
+
+    <br /><br />
+
+    <label for="waiter">Waiter Tip (%):</label>
+    <input id="waiter" type="number" min="0" [value]="waiter" (input)="input_waiter_percent_func($event)"
+        placeholder="Enter tip percentage" class="border p-1" />
+
+    <br /><br />
+
+    @if (bill > 0 && people > 0) {
+    <p><strong>Bill:</strong> {{ bill | number:'1.2-2' }}</p>
+
+    <p>
+        <strong>Price per person before tip:</strong>
+        {{ each | number:'1.2-2' }}
+    </p>
+
+    <p><strong>Waiter's Tip:</strong> {{ waiter }}%</p>
+
+    <p>
+        <strong>Price per person including tip:</strong>
+        {{ price_of_each_person_including_waiter_tip | number:'1.2-2' }}
+    </p>
+
+    <p>
+        <strong>Total price including tip:</strong>
+        {{ total_price | number:'1.2-2' }}
+    </p>
+    }
+</div>
