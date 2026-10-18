@@ -16,10 +16,15 @@ import { FooterComponent } from './01CompoLearning/footer/footer.component';
 // One Way Data Binding
 // import { InterpolationComponent } from './02DataBindingLearning/interpolation/interpolation.component';
 // import { PropertyBindingComponent } from './02DataBindingLearning/property-binding/property-binding.component';
-import { EventBindingComponent } from './02DataBindingLearning/event-binding/event-binding.component';
-import { TipCalculatorComponent } from './02DataBindingLearning/Project/tip-calculator/tip-calculator.component';
+// import { EventBindingComponent } from './02DataBindingLearning/event-binding/event-binding.component';
+// import { TipCalculatorComponent } from './02DataBindingLearning/Project/tip-calculator/tip-calculator.component';
 
 // ++++++++++++++++++++ 📙 DataBindingLearning Components End ++++++++++++++++++++
+
+// ++++++++++ 📙 stage2 Start++++++++++
+import { ProductCatalogComponent } from './stage2/product-catalog/product-catalog.component';
+// import { SignalComponent } from './stage2/signal/signal.component';
+// ++++++++++ 📙 stage2 End++++++++++
 
 @Component({
   selector: 'app-rooted',
@@ -34,11 +39,17 @@ import { TipCalculatorComponent } from './02DataBindingLearning/Project/tip-calc
     FooterComponent,
   ], */
 
+  // imports: [
+  // InterpolationComponent,
+  // PropertyBindingComponent,
+  // EventBindingComponent,
+  // TipCalculatorComponent,
+  // ],
+
+  // * Stage2
   imports: [
-    // InterpolationComponent,
-    // PropertyBindingComponent,
-    // EventBindingComponent,
-    TipCalculatorComponent,
+    ProductCatalogComponent,
+    // SignalComponent,
   ],
 
   templateUrl: `./app.html`,

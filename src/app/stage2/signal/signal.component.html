@@ -1,0 +1,21 @@
+<main>
+
+    <h1>signal Component</h1>
+
+    <h1>Count: {{count()}}</h1>
+
+    <h1>Count: {{doubleCount()}} </h1>
+
+    <button (click)="increament()">Count</button>
+
+    <br><br>
+
+    <div>
+        <p>{{filterMethod()}}</p>
+
+        <input type="text" (input)="input_field($event)" class="border-1">
+        <button (click)="onlyA()">only A</button>
+
+    </div>
+
+</main>

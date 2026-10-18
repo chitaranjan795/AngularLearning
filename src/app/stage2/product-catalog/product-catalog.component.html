@@ -1,0 +1,15 @@
+<input type="text" placeholder="Enter Products" (input)="inputProducts($event)">
+
+<br><br>
+<div class="card">
+
+    @for (item of filteredProduct(); track $index) {
+    <div class="productCard border-1 ">
+        <img [src]="item.image" alt="" width="250">
+        <p> {{item.name}} </p>
+        <p> {{item.price | currency: 'INR'}} </p>
+
+    </div>
+    }
+
+</div>
