@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './product-catalog.component.css',
 })
 export class ProductCatalogComponent {
-  porducts = signal([
+  product = signal([
     {
       name: 'Aadidas',
       category: 'shoe',
@@ -58,14 +58,18 @@ export class ProductCatalogComponent {
     },
   ]);
 
-  filteredProduct = signal(this.porducts());
-$event: any;
+  filteredProduct = signal(this.product());
+  $event: any;
 
   inputProducts(event: Event) {
-    let inputValue = event.target as HTMLInputElement;
+    let inputValue = (event.target as HTMLInputElement).value.trim().toLowerCase();
 
-    this.filteredProduct.update(() =>
-      this.porducts().filter((item) => item.category.toLowerCase().includes(inputValue.value)),
+    this.filteredProduct.set(
+      this.product().filter(
+        (item) =>
+          item.name.toLowerCase().includes(inputValue) ||
+          item.category.toLowerCase().includes(inputValue),
+      ),
     );
   }
 }

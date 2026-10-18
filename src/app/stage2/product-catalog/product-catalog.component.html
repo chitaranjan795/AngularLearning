@@ -3,9 +3,9 @@
 <br><br>
 <div class="card">
 
-    @for (item of filteredProduct(); track $index) {
+    @for (item of filteredProduct(); track item.name) {
     <div class="productCard border-1 ">
-        <img [src]="item.image" alt="" width="250">
+        <img [src]="item.image" [alt]="item.alt" width="250">
         <p> {{item.name}} </p>
         <p> {{item.price | currency: 'INR'}} </p>
 
