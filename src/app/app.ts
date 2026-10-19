@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 
 // ++++++++++++++++++++ 📙 CompoLearning Components Start ++++++++++++++++++++
 
-import { NavigationComponent } from './01CompoLearning/navigation/navigation.component';
-import { HeaderComponent } from './01CompoLearning/header/header.component';
-import { ServicesComponent } from './01CompoLearning/services/services.component';
-import { AboutComponent } from './01CompoLearning/about/about.component';
-import { ReviewsComponent } from './01CompoLearning/reviews/reviews.component';
-import { FooterComponent } from './01CompoLearning/footer/footer.component';
+// import { NavigationComponent } from './01CompoLearning/navigation/navigation.component';
+// import { HeaderComponent } from './01CompoLearning/header/header.component';
+// import { ServicesComponent } from './01CompoLearning/services/services.component';
+// import { AboutComponent } from './01CompoLearning/about/about.component';
+// import { ReviewsComponent } from './01CompoLearning/reviews/reviews.component';
+// import { FooterComponent } from './01CompoLearning/footer/footer.component';
 
 // ++++++++++++++++++++ 📙 CompoLearning Components End ++++++++++++++++++++
 
@@ -22,9 +22,15 @@ import { FooterComponent } from './01CompoLearning/footer/footer.component';
 // ++++++++++++++++++++ 📙 DataBindingLearning Components End ++++++++++++++++++++
 
 // ++++++++++ 📙 stage2 Start++++++++++
-import { ProductCatalogComponent } from './stage2/product-catalog/product-catalog.component';
+
+// import { ProductCatalogComponent } from './stage2/product-catalog/product-catalog.component';
 // import { SignalComponent } from './stage2/signal/signal.component';
+
 // ++++++++++ 📙 stage2 End++++++++++
+
+// ++++++++++ 📙 stage3 Start ++++++++++
+import { ToDoComponent } from './stage3/to-do/to-do.component';
+// ++++++++++ 📙 stage3 End ++++++++++
 
 @Component({
   selector: 'app-rooted',
@@ -47,10 +53,13 @@ import { ProductCatalogComponent } from './stage2/product-catalog/product-catalo
   // ],
 
   // * Stage2
-  imports: [
-    ProductCatalogComponent,
-    // SignalComponent,
-  ],
+  // imports: [
+  // ProductCatalogComponent,
+  // SignalComponent,
+  // ],
+
+  // * Stage2
+  imports: [ToDoComponent],
 
   templateUrl: `./app.html`,
   styleUrl: `./app.css`,

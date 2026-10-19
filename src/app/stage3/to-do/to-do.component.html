@@ -1,0 +1,9 @@
+<div class="p-[4px]">
+
+    <input type="text" [value]="newTodos()" (input)="inputData($event)" class="border-1 mr-[5px]">
+    <button (click)="addItem()" class="border-1 pl-[4px] pr-[4px]">Add</button>
+
+    @for (user of todos(); track user.id) {
+    <app-child [title]="user.title" [id]="user.id" (deleteItem)="deleteItem($event)" />
+    }
+</div>
