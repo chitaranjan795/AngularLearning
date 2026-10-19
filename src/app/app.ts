@@ -32,6 +32,10 @@ import { Component } from '@angular/core';
 import { ToDoComponent } from './stage3/to-do/to-do.component';
 // ++++++++++ 📙 stage3 End ++++++++++
 
+// ++++++++++ 📙 stage4 Start ++++++++++
+import { ShoppingCartComponent } from './stage4/shopping-cart/shopping-cart.component';
+// ++++++++++ 📙 stage4 End ++++++++++
+
 @Component({
   selector: 'app-rooted',
   standalone: true,
@@ -58,8 +62,11 @@ import { ToDoComponent } from './stage3/to-do/to-do.component';
   // SignalComponent,
   // ],
 
-  // * Stage2
-  imports: [ToDoComponent],
+  // * Stage3
+  // imports: [ToDoComponent],
+
+  // * Stage4
+  imports: [ShoppingCartComponent],
 
   templateUrl: `./app.html`,
   styleUrl: `./app.css`,

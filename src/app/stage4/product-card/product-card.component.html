@@ -1,0 +1,6 @@
+<div class="border-1 p-[15px]" [id]="id()">
+    <img [src]="image()" [alt]="alt()" width="250">
+    <p> {{name()}} </p>
+    <button (click)="addToCart()" class="border-1 bg-gray-200 pl-[5px] pr-[5px] cursor-pointer">Add</button>
+    <p> {{price() | currency:'INR'}} </p>
+</div>

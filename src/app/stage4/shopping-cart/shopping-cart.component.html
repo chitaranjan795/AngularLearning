@@ -1,0 +1,25 @@
+<main class="flex gap-[10px]">
+
+    @for (product of products(); track product.id) {
+    <app-product-card [id]="product.id" [name]="product.name" [image]="product.image" [alt]="product.alt"
+        [price]="product.price" (selectedProduct)="handleProductSelected($event)" />
+    }
+
+</main>
+
+<!-- Cart summary section -->
+<div class="cart-summary">
+    <h2>Selected Products</h2>
+    <ul>
+        @for (item of selectedProducts(); track $index) {
+        <li>
+            {{ item.name }} - ₹{{ item.price }}
+        </li>
+        } @empty {
+        <li>No items selected yet.</li>
+        }
+    </ul>
+
+    <!-- Read computed signal by calling it as a function -->
+    <h3>Total Price: ₹{{ totalPrice() }}</h3>
+</div>
