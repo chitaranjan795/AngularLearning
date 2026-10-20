@@ -1,0 +1,7 @@
+<p>stage5 works!</p>
+
+<button (click)="showProducts()">Show Products</button>
+
+@for (item of productDetails(); track item.id) {
+<p>{{item.name}} - {{item.price}}</p>
+}

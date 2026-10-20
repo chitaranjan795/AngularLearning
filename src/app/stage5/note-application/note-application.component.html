@@ -1,0 +1,24 @@
+<div class="w-[50%] mx-auto mt-10 p-6 bg-white rounded-2xl shadow-xl">
+    <h1 class="text-2xl font-bold text-center">Write your To-Dos</h1>
+    <input type="text" placeholder="🔍 Search note..." (input)="search.set($any($event.target).value)"
+        class="w-full p-2 mt-5 border-1 rounded focus:outline">
+
+    <div class="flex gap-2 mt-5">
+        <input type="text" #noteInput placeholder="Add Note" class="flex-1 rounded border-1 p-2">
+        <button class="bg-blue-500 px-4 text-white rounded"
+            (click)="addNote(noteInput.value); noteInput.value = ''">Add</button>
+    </div>
+
+    <div class="space-y-2 mt-4">
+        @for(note of filteredNotes(); track note; let i = $index){
+        <div class="flex justify-between pr-2 pl-3 items-center bg-gray-100 py-2 rounded-lg">
+            <span class="text-gray-700 font-bold">
+                {{note}}
+            </span>
+            <button class="text-red-500 font-bold text-[1rem] text-shadow-md cursor-pointer"
+                (click)="deleteNote(i)">Delete</button>
+        </div>
+        }
+    </div>
+
+</div>

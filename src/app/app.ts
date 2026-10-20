@@ -36,6 +36,11 @@ import { ToDoComponent } from './stage3/to-do/to-do.component';
 import { ShoppingCartComponent } from './stage4/shopping-cart/shopping-cart.component';
 // ++++++++++ 📙 stage4 End ++++++++++
 
+// ++++++++++ 📙 stage5 Start ++++++++++
+import { Stage5Component } from './stage5/stage5.component';
+import { NoteApplicationComponent } from './stage5/note-application/note-application.component';
+// ++++++++++ 📙 stage5 End ++++++++++
+
 @Component({
   selector: 'app-rooted',
   standalone: true,
@@ -66,7 +71,13 @@ import { ShoppingCartComponent } from './stage4/shopping-cart/shopping-cart.comp
   // imports: [ToDoComponent],
 
   // * Stage4
-  imports: [ShoppingCartComponent],
+  // imports: [ShoppingCartComponent],
+
+  // * Stage5
+  imports: [
+    // Stage5Component,
+    NoteApplicationComponent
+  ],
 
   templateUrl: `./app.html`,
   styleUrl: `./app.css`,
