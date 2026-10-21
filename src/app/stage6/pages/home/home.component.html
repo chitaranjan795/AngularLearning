@@ -1,0 +1,8 @@
+<p>home works!</p>
+
+@for (item of users(); track $index) {
+<a routerLink="/profile" [queryParams]="{name:item.name, age: item.age}" class="p-1 border-1">Go to {{item.name}}
+    profile
+</a>
+<br><br>
+}

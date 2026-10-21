@@ -1,8 +1,9 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './Routing/pages/home/home.component';
-import { ServicesComponent } from './Routing/pages/services/services.component';
-import { AboutComponent } from './Routing/pages/about/about.component';
-import { PageNotFoundComponent } from './Routing/pages/page-not-found/page-not-found.component';
+import { HomeComponent } from './stage6/pages/home/home.component';
+import { AboutComponent } from './stage6/pages/about/about.component';
+import { ContactComponent } from './stage6/pages/contact/contact.component';
+import { NotForundComponent } from './stage6/pages/not-forund/not-forund.component';
+import { ProfileComponent } from './stage6/pages/profile/profile.component';
 
 export const routes: Routes = [
   {
@@ -16,13 +17,17 @@ export const routes: Routes = [
   },
 
   {
-    path: 'services',
-    component: ServicesComponent,
+    path: 'contact',
+    component: ContactComponent,
   },
 
-  // {
-  //   path: '**',
-  //   component: PageNotFoundComponent,
-  // },
-  { path: '**', redirectTo: '' }, // It will redirect to the home component page
+  {
+    path: 'profile',
+    component: ProfileComponent,
+  },
+
+  {
+    path: '**',
+    component: NotForundComponent,
+  },
 ];

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 // ++++++++++++++++++++ 📙 CompoLearning Components Start ++++++++++++++++++++
 
@@ -29,17 +30,21 @@ import { Component } from '@angular/core';
 // ++++++++++ 📙 stage2 End++++++++++
 
 // ++++++++++ 📙 stage3 Start ++++++++++
-import { ToDoComponent } from './stage3/to-do/to-do.component';
+// import { ToDoComponent } from './stage3/to-do/to-do.component';
 // ++++++++++ 📙 stage3 End ++++++++++
 
 // ++++++++++ 📙 stage4 Start ++++++++++
-import { ShoppingCartComponent } from './stage4/shopping-cart/shopping-cart.component';
+// import { ShoppingCartComponent } from './stage4/shopping-cart/shopping-cart.component';
 // ++++++++++ 📙 stage4 End ++++++++++
 
 // ++++++++++ 📙 stage5 Start ++++++++++
-import { Stage5Component } from './stage5/stage5.component';
-import { NoteApplicationComponent } from './stage5/note-application/note-application.component';
+// import { Stage5Component } from './stage5/stage5.component';
+// import { NoteApplicationComponent } from './stage5/note-application/note-application.component';
 // ++++++++++ 📙 stage5 End ++++++++++
+
+// ++++++++++ 📙 stage6 Start ++++++++++
+import { RouterNavigationComponent } from './stage6/router-navigation/router-navigation.component';
+// ++++++++++ 📙 stage6 End ++++++++++
 
 @Component({
   selector: 'app-rooted',
@@ -74,10 +79,13 @@ import { NoteApplicationComponent } from './stage5/note-application/note-applica
   // imports: [ShoppingCartComponent],
 
   // * Stage5
-  imports: [
-    // Stage5Component,
-    NoteApplicationComponent
-  ],
+  // imports: [
+  // Stage5Component,
+  // NoteApplicationComponent
+  // ],
+
+  // * Stage6
+  imports: [RouterOutlet, RouterNavigationComponent],
 
   templateUrl: `./app.html`,
   styleUrl: `./app.css`,
