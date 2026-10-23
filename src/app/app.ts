@@ -46,6 +46,10 @@ import { RouterOutlet } from '@angular/router';
 import { RouterNavigationComponent } from './stage6/router-navigation/router-navigation.component';
 // ++++++++++ 📙 stage6 End ++++++++++
 
+// ++++++++++ 📙 stage7 Start ++++++++++
+import { FormsComponent } from './stage7/forms/forms.component';
+// ++++++++++ 📙 stage7 End ++++++++++
+
 @Component({
   selector: 'app-rooted',
   standalone: true,
@@ -85,7 +89,9 @@ import { RouterNavigationComponent } from './stage6/router-navigation/router-nav
   // ],
 
   // * Stage6
-  imports: [RouterOutlet, RouterNavigationComponent],
+  // imports: [RouterOutlet, RouterNavigationComponent],
+
+  imports: [FormsComponent],
 
   templateUrl: `./app.html`,
   styleUrl: `./app.css`,

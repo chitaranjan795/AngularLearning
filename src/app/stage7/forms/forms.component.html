@@ -1,0 +1,81 @@
+<h1>Login Form</h1>
+
+<input type="email" placeholder="Email" class="border-1" [formControl]="email" />
+
+@if (email.invalid && email.touched) {
+<span>
+    @if (email.hasError('required')) {
+    Email is required.
+    } @else if (email.hasError('email')) {
+    Enter a valid email address.
+    }
+</span>
+}
+
+<br><br>
+
+<input type="password" placeholder="Password" class="border-1" [formControl]="password" />
+
+@if (password.invalid && password.touched) {
+<span>
+    @if (password.hasError('required')) {
+    Password is required.
+    } @else if (password.hasError('minlength')) {
+    Password must contain at least 6 characters.
+    }
+</span>
+}
+
+<br><br>
+
+<button type="button" class="border-1" (click)="login()">
+    Login
+</button>
+
+<button type="button" class="border-1" (click)="reset()">
+    Reset
+</button>
+
+<h2>Email: {{ email.value }}</h2>
+<h2>Password: {{ password.value }}</h2>
+
+<hr>
+
+<h1>Registration Form Group</h1>
+
+<form [formGroup]="registrationForm" (ngSubmit)="register()">
+
+    <input type="text" placeholder="Title" class="border-1" formControlName="title" />
+
+    @if (
+    registrationForm.controls.title.invalid &&
+    registrationForm.controls.title.touched
+    ) {
+    <span>Title is required.</span>
+    }
+
+    <br><br>
+
+    <textarea placeholder="Description" class="border-1" formControlName="desc"></textarea>
+
+    @if (
+    registrationForm.controls.desc.invalid &&
+    registrationForm.controls.desc.touched
+    ) {
+    <span>Description is required.</span>
+    }
+
+    <br><br>
+
+    <button type="submit" class="border-1">
+        Register
+    </button>
+
+    <button type="button" class="border-1" (click)="registrationForm.reset()">
+        Reset
+    </button>
+
+</form>
+
+<h2>Title: {{ registrationForm.value.title }}</h2>
+<p>Description: {{ registrationForm.value.desc }}</p>
